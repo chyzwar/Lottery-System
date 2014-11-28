@@ -3,9 +3,12 @@ import pandas as pd
 
 # Read "human generated" combinations, and keep only numbers (not stars in
 # this tutorial)
-humandata = pd.read_csv(
-    "winning_results.csv", sep=",")
-humandata = humandata[['id', 'day', 'day_number', 'month', 'year', 'n1', 'n2', 'n3', 'n4', 'n5', 'd1', 'd2', 'cash', 'win']]
+humandata = pd.read_csv("winning_results.csv", sep=",")
+print(humandata)
+humandata = humandata[['draw_number',
+                       'day', 'day_number', 'month', 'year',
+                       'n1', 'n2', 'n3', 'n4', 'n5', 'd1', 'd2',
+                       'cash_to_win', 'winners_number']]
 
 humandatalen = humandata.shape[0]
 
@@ -18,7 +21,7 @@ randomdata = np.array(randomdata)
 randomdata = pd.DataFrame(randomdata,
                           index=[
                               i + humandatalen for i in range(humandatalen)],
-                          columns=['c1', 'c2', 'c3', 'c4', 'c5'])
+                          columns=['n1', 'n2', 'n3', 'n4', 'n5'])
 randomdatalen = randomdata.shape[0]
 
 # Concatenate the 2 datasets : human + random
