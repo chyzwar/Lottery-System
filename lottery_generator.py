@@ -7,10 +7,10 @@ from sklearn.cross_validation import train_test_split
 
 # Read result from past euro millions draws, data is cleaned
 winning_numbers = pd.read_csv("winning_results.csv", sep=",")
-winning_numbers = winning_numbers[['n1', 'n2', 'n3', 'n4', 'n5', 'd1', 'd2']]
+winning_numbers = winning_numbers[['n coursecd1', 'n2', 'n3', 'n4', 'n5', 'd1', 'd2']]
 winning_numbers_len = winning_numbers.shape[0]
 print(winning_numbers_len)
-
+print(winning_numbers)
 
 # Create a set of random combinationssem size as winning results
 randomdata = []

@@ -1,0 +1,7 @@
+ipdb==0.8
+ipython==2.3.1
+numpy==1.9.1
+pandas==0.15.2
+python-dateutil==2.4.0
+pytz==2014.10
+six==1.9.0
