@@ -12,7 +12,6 @@ class EuroData:
 
     def read_winners(self, filename):
         # Read result from past euro millions draws, data is cleaned
-        # "winning_results.csv"
         winning_numbers = pd.read_csv(filename, sep=",")
         winning_numbers = winning_numbers[
             ['n1', 'n2', 'n3', 'n4', 'n5', 'd1', 'd2']]
