@@ -1,6 +1,7 @@
 import euro_analysis as ea
 import euro_data as ed
 import random
+import pprint
 
 
 class EuroGenerator:
@@ -48,4 +49,5 @@ class EuroGenerator:
 
 
 generator = EuroGenerator()
-pprint(generator.generate_euromilions(20))
+pp = pprint.PrettyPrinter(depth=7)
+pp.pprint(generator.generate_euromilions(20))
