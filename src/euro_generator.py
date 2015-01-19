@@ -26,7 +26,7 @@ class EuroGenerator:
         results = [[[], []] for _ in range(0, number)]
 
         for j in range(0, number):
-            for i in range(1,  100):
+            for i in range(1,  50):
                 number = self.weighted_choice(weights_numbers)
                 dips = self.weighted_choice(weights_dips)
                 results[j][0].append(number)
@@ -34,8 +34,8 @@ class EuroGenerator:
 
         final_results = []
         for res in results:
-            final_results.append(random.sample(res[0], 5))
-            final_results.append(random.sample(res[1], 2))
+            final_results.append(sorted(random.sample(set(res[0]), 5)))
+            final_results.append(sorted(random.sample(set(res[1]), 2)))
         return final_results
 
     def weighted_choice(self, weights):
